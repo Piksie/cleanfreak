@@ -1,0 +1,64 @@
+@use "./../abstracts" as *;
+@use "./../base" as *;
+
+.social-proof {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2.4rem 2.4rem;
+  background: $gradient-dark;
+
+  @include respond-to("tablet") {
+    padding: 6.4rem 2.4rem;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 102.4rem;
+
+    @include respond-to("tablet") {
+      flex-direction: row;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.2rem 1.6rem;
+
+    @include respond-to("tablet") {
+      flex: 1;
+      gap: 0.4rem;
+      flex-direction: column;
+      padding: 2rem 3.2rem;
+      border-right: 1px solid $primary-600;
+    }
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  &__number {
+    font-family: "DM Sans", sans-serif;
+    font-size: 3.2rem;
+    line-height: 4rem;
+    font-weight: 600;
+    color: $secondary-100;
+
+    @include respond-to("tablet") {
+      font-size: 6.4rem;
+      line-height: 8rem;
+    }
+  }
+
+  &__description {
+    @include respond-to("tablet") {
+      text-align: center;
+    }
+  }
+}

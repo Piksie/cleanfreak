@@ -1,3 +1,33 @@
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/inter/Inter-SemiBold.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/inter/Inter-Bold.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/inter/Inter-ExtraBold.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../assets/fonts/raleway/Raleway-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../assets/fonts/raleway/Raleway-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "DM Sans";
+  src: url("../assets/fonts/dmsans/DMSans-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: 500;
+}
 html,
 body,
 div,
@@ -143,35 +173,10 @@ button {
   border: none;
 }
 
-@font-face {
-  font-family: "Inter";
-  src: url("../assets/fonts/inter/Inter-SemiBold.ttf") format("truetype");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "Inter";
-  src: url("../assets/fonts/inter/Inter-Bold.ttf") format("truetype");
-  font-weight: 500;
-}
-@font-face {
-  font-family: "Inter";
-  src: url("../assets/fonts/inter/Inter-ExtraBold.ttf") format("truetype");
-  font-weight: 600;
-}
-@font-face {
-  font-family: "Raleway";
-  src: url("../assets/fonts/raleway/Raleway-Regular.ttf") format("truetype");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "Raleway";
-  src: url("../assets/fonts/raleway/Raleway-Medium.ttf") format("truetype");
-  font-weight: 500;
-}
 h1 {
   font-family: "Inter", sans-serif;
-  font-size: 2.8rem;
-  line-height: 3.6rem;
+  font-size: 3rem;
+  line-height: 4rem;
   font-weight: 600;
   color: #FFFFFF;
 }
@@ -206,30 +211,36 @@ h3 {
 
 .body1 {
   font-family: "Raleway", sans-serif;
-  font-size: 1.8rem;
-  line-height: 2.8rem;
+  font-size: 2rem;
+  line-height: 3.2rem;
   font-weight: 500;
   color: #FFFFFF;
 }
 @media (min-width: 768px) {
   .body1 {
-    font-size: 2rem;
-    line-height: 2.8rem;
+    font-size: 2.2rem;
+    line-height: 3.2rem;
   }
 }
 @media (min-width: 996px) {
   .body1 {
-    font-size: 2.4rem;
+    font-size: 2.6rem;
     line-height: 3.6rem;
   }
 }
 
 .body2 {
   font-family: "Raleway", sans-serif;
-  font-size: 2.3rem;
+  font-size: 2rem;
   line-height: 3.2rem;
   font-weight: 500;
   color: #FFFFFF;
+}
+@media (min-width: 768px) {
+  .body2 {
+    font-size: 2.3rem;
+    line-height: 3.2rem;
+  }
 }
 
 .body3 {
@@ -375,7 +386,7 @@ h3 {
   align-items: center;
   gap: 1.6rem;
   padding: 1.2rem 2.4rem;
-  border-radius: 0.4rem;
+  border-radius: 6px;
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
@@ -398,9 +409,9 @@ h3 {
 }
 .nav__links .nav__link--cta__arrow {
   display: block;
-  width: 1.2rem;
+  width: 1.8rem;
   height: 1.2rem;
-  background: url("./../../assets/icons/chevron_right.svg");
+  background: url("./../../assets/icons/arrow_right.svg");
   background-repeat: no-repeat;
   transition: all 0.25s ease-out;
 }
@@ -408,7 +419,7 @@ h3 {
   background-color: #45869A;
   transition: all 0.25s ease-in;
 }
-.nav__links .nav__link--cta:hover .nav__link--cta__arrow {
+.nav__links .nav__link--cta:hover .cta-btn__arrow {
   transform: translateX(4px);
   transition: all 0.25s ease-in;
 }
@@ -480,7 +491,8 @@ h3 {
 }
 @media (min-width: 996px) {
   .hero {
-    height: clamp(80rem, 100vh, 140rem);
+    min-height: 64rem;
+    height: calc(100vh - 24rem);
   }
 }
 @media (min-width: 1280px) {
@@ -500,11 +512,6 @@ h3 {
   gap: 3.2rem;
   width: 100%;
   max-width: 140rem;
-}
-@media (min-width: 1280px) {
-  .hero__container {
-    transform: translateY(-4rem);
-  }
 }
 .hero__text {
   max-width: 48rem;
@@ -526,7 +533,7 @@ h3 {
 }
 @media (min-width: 768px) {
   .hero__text__description {
-    max-width: 40rem;
+    max-width: 48rem;
   }
 }
 @media (min-width: 996px) {
@@ -539,7 +546,7 @@ h3 {
   align-items: center;
   gap: 1.6rem;
   padding: 1.2rem 2.4rem;
-  border-radius: 0.4rem;
+  border-radius: 6px;
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
@@ -562,9 +569,9 @@ h3 {
 }
 .hero__cta-btn__arrow {
   display: block;
-  width: 1.2rem;
+  width: 1.8rem;
   height: 1.2rem;
-  background: url("./../../assets/icons/chevron_right.svg");
+  background: url("./../../assets/icons/arrow_right.svg");
   background-repeat: no-repeat;
   transition: all 0.25s ease-out;
 }
@@ -572,9 +579,70 @@ h3 {
   background-color: #45869A;
   transition: all 0.25s ease-in;
 }
-.hero__cta-btn:hover .hero__cta-btn__arrow {
+.hero__cta-btn:hover .cta-btn__arrow {
   transform: translateX(4px);
   transition: all 0.25s ease-in;
+}
+
+.social-proof {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2.4rem 2.4rem;
+  background: radial-gradient(50% 50% at 50% 50%, #061A1F 0%, #04161A 100%);
+}
+@media (min-width: 768px) {
+  .social-proof {
+    padding: 6.4rem 2.4rem;
+  }
+}
+.social-proof__items {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 102.4rem;
+}
+@media (min-width: 768px) {
+  .social-proof__items {
+    flex-direction: row;
+  }
+}
+.social-proof__item {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.2rem 1.6rem;
+}
+@media (min-width: 768px) {
+  .social-proof__item {
+    flex: 1;
+    gap: 0.4rem;
+    flex-direction: column;
+    padding: 2rem 3.2rem;
+    border-right: 1px solid #183F4A;
+  }
+}
+.social-proof__item:last-child {
+  border: none;
+}
+.social-proof__number {
+  font-family: "DM Sans", sans-serif;
+  font-size: 3.2rem;
+  line-height: 4rem;
+  font-weight: 600;
+  color: #F79734;
+}
+@media (min-width: 768px) {
+  .social-proof__number {
+    font-size: 6.4rem;
+    line-height: 8rem;
+  }
+}
+@media (min-width: 768px) {
+  .social-proof__description {
+    text-align: center;
+  }
 }
 
 main {
