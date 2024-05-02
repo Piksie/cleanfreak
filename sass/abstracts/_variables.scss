@@ -1,7 +1,9 @@
 // Breakpoint variables
 $breakpoints: (
   "tablet": 768px,
+  "desktop-sm": 996px,
   "desktop": 1280px,
+  "desktop-lg": 1400px
 ) !default;
 
 // Color variables
@@ -13,8 +15,9 @@ $primary-800: #05171C;
 $primary-900: #000F13;
 $secondary-100: #F79734;
 $accent-100: #3C7B8E;
+$accent-100-hov: #45869A;
 $accent-200: #397182;
 $white: #FFFFFF;
 
 // Gradients
-$gradient-default: linear-gradient(0deg, rgba(0, 15, 19, 0) 0%, #000F13 53.37%);
+$gradient-default: linear-gradient(0deg, rgba(0, 15, 19, 0) 0%, #000f13b4 70%);

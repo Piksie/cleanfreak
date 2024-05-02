@@ -1,4 +1,229 @@
+@use "./../abstracts" as *;
+@use "./../base" as *;
+
 .nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  padding: 2rem 2rem 2rem 2rem;
+  background: $gradient-default;
+  background-color: none;
+  z-index: 1;
+  transition: all 0.4s ease-out;
+
+  @include respond-to("tablet") {
+    padding: 2rem 3.2rem 2rem 3.2rem;
+  }
+
+  @include respond-to("desktop-sm") {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &__mobile-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    color: black;
+
+    @include respond-to("desktop-sm") {
+      width: auto;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    @include respond-to("desktop-sm") {
+      flex-direction: row;
+      width: 100%;
+      max-width: 140rem;
+    }
+  }
+
+  &__logo img {
+    height: 4.8rem;
+    width: auto;
+    transition: all 0.15s ease-out;
+
+    @include respond-to("tablet") {
+      height: 5.6rem;
+    }
+
+    @include respond-to("desktop-sm") {
+      height: 7.6rem;
+    }
+  }
+
+  &__menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 40px;
+    height: 40px;
+
+    @include respond-to("desktop-sm") {
+      display: none;
+    }
+
+    span {
+      display: block;
+      width: 32px;
+      height: 2px;
+      border-radius: 3px;
+      background-color: $white;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  &__menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+
+  &__menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+    width: 0;
+  }
+
+  &__menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.6rem;
+    height: 100vh;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: max-height 0.4s ease-out;
+
+    @include respond-to("desktop-sm") {
+      flex-direction: row;
+      height: auto;
+      max-height: unset;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    li {
+      display: flex;
+    }
+
+    a {
+      font-family: "Inter", sans-serif;
+      font-size: 1.9rem;
+      line-height: 2.6rem;
+      font-weight: 400;
+      color: $white;
+      transition: font-size 0.25s ease-out;
+    }
+
+    .nav__link--cta {
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
+      padding: 1.2rem 2.4rem;
+      border-radius: 0.4rem;
+      font-family: "Inter", sans-serif;
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+      color: $white;
+      background-color: $accent-100;
+      transition: all 0.25s ease-out;
+
+      @include respond-to("tablet") {
+        padding: 1.6rem 3.2rem;
+        font-size: 1.8rem;
+      }
+
+      @include respond-to("desktop-sm") {
+        padding: 1.8rem 3.4rem;
+        font-size: 2rem;
+      }
+
+      &__arrow {
+        display: block;
+        width: 1.2rem;
+        height: 1.2rem;
+        background: url("./../../assets/icons/chevron_right.svg");
+        background-repeat: no-repeat;
+        transition: all 0.25s ease-out;
+      }
+
+      &:hover {
+        background-color: $accent-100-hov;
+        transition: all 0.25s ease-in;
+        .nav__link--cta__arrow {
+          transform: translateX(4px);
+          transition: all 0.25s ease-in;
+        }
+      }
+    }
+  }
+}
+
+// Hamburger menu open
+.nav.active {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+  backdrop-filter: blur(3px);
+  transition: all 0.4s ease-out;
+
+  .nav__links {
+    display: flex;
+    max-height: 100vh;
+    margin-top: 4rem;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.4s ease-out 0.1s;
+
+    @include respond-to("desktop-sm") {
+      margin-top: 0;
+    }
+  }
+}
+
+// Navigation when scrolled from top
+.nav.scrolled {
+  background-color: #000f13cc;
+  backdrop-filter: blur(3px);
+  transition: all 0.25s ease-in;
+
+  @include respond-to("desktop-sm") {
+    padding: 1.9rem 3.2rem 1.9rem 3.2rem;
+  }
+
+  .logo {
+    @include respond-to("desktop-sm") {
+      height: 6.8rem;
+      transition: height 0.25s ease-in;
+    }
+  }
+
+  .nav__links {
+    li > a {
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+      transition: all 0.25s ease-out;
+    }
+  }
+
+  .nav__link--cta {
+    padding: 1.5rem 3rem;
+  }
 }

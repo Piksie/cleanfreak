@@ -9,30 +9,47 @@
   <body>
     <main>
       <nav class="nav">
-        <div class="nav__logo">
-          <img src="assets/logo.svg" alt="Cleanfreak logo" class="logo" />
+        <div class="nav__wrapper">
+          <div class="nav__mobile-container">
+            <div class="nav__logo">
+              <img src="assets/logo.svg" alt="Cleanfreak logo" class="logo" />
+            </div>
+            <button
+              type="button"
+              id="nav__menu-toggle"
+              class="nav__menu-toggle"
+            >
+              <span></span><span></span><span></span>
+            </button>
+          </div>
+          <ul class="nav__links" id="nav__links">
+            <li class="nav__item">
+              <a href="#" class="nav__link">Galerija slik</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Kontakt</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link--cta">Zagotovite si termin<span class="nav__link--cta__arrow"></span></a>
+            </li>
+          </ul>
         </div>
-        <ul class="nav__links">
-          <li class="nav__item">
-            <a href="#" class="nav__link">Galerija slik</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">Kontakt</a>
-          </li>
-        </ul>
-        <a href="#" class="nav__link--cta">Zagotovite si svoj termin</a>
       </nav>
 
       <!-- Hero Section -->
       <section class="hero">
-        <h1 class="hero__title">
-          Profesionalne avtokozmetične storitve za vaše vozilo
-        </h1>
-        <p class="hero__description">
-          Pri Cleanfreak smo specialisti za detajlno poliranje, čiščenje in
-          zaščito vašega vozila.
-        </p>
-        <button class="hero__cta-btn cta-btn">Zagotovite si svoj termin</button>
+        <div class="hero__container">
+          <div class="hero__text">
+            <h1 class="hero__title">
+              Profesionalne avtokozmetične storitve za vaše vozilo
+            </h1>
+            <p class="hero__text__description body1">
+              Pri Cleanfreak smo specialisti za detajlno poliranje, čiščenje in
+              zaščito vašega vozila.
+            </p>
+          </div>
+          <a href="#" class="hero__cta-btn">Zagotovite si termin <span class="hero__cta-btn__arrow"></span></a>
+        </div>
       </section>
 
       <!-- Social Proof Section -->
@@ -372,9 +389,11 @@
           />
         </div>
         <div class="footer__copyright">
-          &copy; 2024 Cleanfreak - Matevž Cvajnar S.P. 
+          &copy; 2024 Cleanfreak - Matevž Cvajnar S.P.
         </div>
       </footer>
     </main>
+
+    <script src="script.js" async defer></script>
   </body>
 </html>
