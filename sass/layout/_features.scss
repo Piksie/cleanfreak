@@ -1,0 +1,165 @@
+@use "./../abstracts" as *;
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  padding-top: 3.2rem;
+  width: 100%;
+  max-width: 132rem;
+
+  &:not(:last-child) {
+    padding-bottom: 1.6rem;
+  }
+
+  @include respond-to("tablet") {
+    gap: 3.2rem;
+    padding-top: 4rem;
+  }
+
+  @include respond-to("desktop-sm") {
+    gap: 4rem;
+    padding-top: 5.6rem;
+  }
+
+  @include respond-to("desktop") {
+    padding-top: 8rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.4rem;
+
+    @include respond-to("tablet") {
+      gap: 3.2rem;
+    }
+
+    @include respond-to("desktop-sm") {
+      gap: 4rem;
+    }
+  }
+
+  &__header-wrapper {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid $primary-600;
+  }
+
+  &__heading {
+    padding-bottom: 1.2rem;
+    border-bottom: 2px solid $secondary-100;
+  }
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 0 280px;
+  width: 100%;
+  padding: 2.6rem;
+  border-radius: 6px;
+  background-color: $primary-700;
+
+  @include respond-to("tablet") {
+    padding: 3.2rem;
+    flex: 1 0 348px;
+  }
+
+  @include respond-to("desktop-sm") {
+    padding: 4rem;
+  }
+
+  &__wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__items-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    gap: 2.4rem;
+  }
+
+  &__items {
+    padding: 2.4rem 0 2.4rem 0;
+  }
+
+  &__items:not(:first-child) {
+    border-top: 1px solid $darkgray;
+  }
+
+  &__icon {
+    width: 8rem;
+    height: auto;
+    margin-bottom: 2.4rem;
+
+    @include respond-to("tablet") {
+      width: 9.6rem;
+    }
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 1rem;
+    padding-left: 3.2rem;
+    font-family: "Inter", sans-serif;
+    font-size: 1.9rem;
+    line-height: 2.8rem;
+    font-weight: 300;
+    color: $white;
+
+    @include respond-to("desktop") {
+      font-size: 2rem;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: -2px;
+      width: 1.6rem;
+      height: 1.6rem;
+      background: url(./../../assets/icons/checkmark.svg);
+      transform: translateY(50%);
+    }
+
+    &:last-child {
+      margin-bottom: none;
+    }
+
+    &--time {
+      &::before {
+        width: 1.8rem;
+        height: 1.8rem;
+        background: url(./../../assets/icons/time.svg);
+      }
+    }
+
+    &--price {
+      &::before {
+        width: 1.8rem;
+        background: url(./../../assets/icons/price.svg);
+      }
+    }
+
+    & > span {
+      font-weight: 500;
+    }
+  }
+
+  &__cta {
+    @include btn-secondary(true);
+    padding: 1.4rem 2.4rem;
+  }
+
+  &--highlighted {
+    background-color: $primary-600;
+  }
+}

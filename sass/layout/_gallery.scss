@@ -1,0 +1,45 @@
+@use "./../abstracts" as *;
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  padding-top: 3.2rem;
+  width: 100%;
+  max-width: 132rem;
+
+  @include respond-to("tablet") {
+    gap: 3.2rem;
+    padding-top: 4rem;
+  }
+
+  @include respond-to("desktop-sm") {
+    gap: 4rem;
+    padding-top: 5.6rem;
+  }
+
+  @include respond-to("desktop") {
+    padding-top: 8rem;
+  }
+
+  &__thumbnails {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+
+    @include respond-to("tablet") {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 3.2rem;
+    }
+
+    @include respond-to("desktop-sm") {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: $radii;
+  }
+}
