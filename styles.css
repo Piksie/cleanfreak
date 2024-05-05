@@ -1,36 +1,36 @@
 @font-face {
   font-family: "Inter";
-  src: url("../assets/fonts/inter/Inter-Regular.ttf") format("truetype");
+  src: url("assets/fonts/inter/Inter-Regular.ttf") format("truetype");
   font-weight: 300;
 }
 @font-face {
   font-family: "Inter";
-  src: url("../assets/fonts/inter/Inter-SemiBold.ttf") format("truetype");
+  src: url("assets/fonts/inter/Inter-SemiBold.ttf") format("truetype");
   font-weight: 400;
 }
 @font-face {
   font-family: "Inter";
-  src: url("../assets/fonts/inter/Inter-Bold.ttf") format("truetype");
+  src: url("assets/fonts/inter/Inter-Bold.ttf") format("truetype");
   font-weight: 500;
 }
 @font-face {
   font-family: "Inter";
-  src: url("../assets/fonts/inter/Inter-ExtraBold.ttf") format("truetype");
+  src: url("assets/fonts/inter/Inter-ExtraBold.ttf") format("truetype");
   font-weight: 600;
 }
 @font-face {
   font-family: "Raleway";
-  src: url("../assets/fonts/raleway/Raleway-Regular.ttf") format("truetype");
+  src: url("assets/fonts/raleway/Raleway-Regular.ttf") format("truetype");
   font-weight: 400;
 }
 @font-face {
   font-family: "Raleway";
-  src: url("../assets/fonts/raleway/Raleway-Medium.ttf") format("truetype");
+  src: url("assets/fonts/raleway/Raleway-Medium.ttf") format("truetype");
   font-weight: 500;
 }
 @font-face {
   font-family: "DM Sans";
-  src: url("../assets/fonts/dmsans/DMSans-VariableFont_opsz,wght.ttf") format("truetype");
+  src: url("assets/fonts/dmsans/DMSans-VariableFont_opsz,wght.ttf") format("truetype");
   font-weight: 500;
 }
 @keyframes selectFlash {
@@ -445,7 +445,7 @@ h3 {
   display: block;
   width: 1.8rem;
   height: 1.2rem;
-  background: url("./../../assets/icons/arrow_right.svg");
+  background: url("assets/icons/arrow_right.svg");
   background-repeat: no-repeat;
   transition: all 0.25s ease-out;
 }
@@ -605,7 +605,7 @@ h3 {
   display: block;
   width: 1.8rem;
   height: 1.2rem;
-  background: url("./../../assets/icons/arrow_right.svg");
+  background: url("assets/icons/arrow_right.svg");
   background-repeat: no-repeat;
   transition: all 0.25s ease-out;
 }
@@ -805,7 +805,7 @@ h3 {
   top: -2px;
   width: 1.6rem;
   height: 1.6rem;
-  background: url(./../../assets/icons/checkmark.svg);
+  background: url(assets/icons/checkmark.svg);
   transform: translateY(50%);
 }
 .feature__item:last-child {
@@ -814,11 +814,11 @@ h3 {
 .feature__item--time::before {
   width: 1.8rem;
   height: 1.8rem;
-  background: url(./../../assets/icons/time.svg);
+  background: url(assets/icons/time.svg);
 }
 .feature__item--price::before {
   width: 1.8rem;
-  background: url(./../../assets/icons/price.svg);
+  background: url(assets/icons/price.svg);
 }
 .feature__item > span {
   font-weight: 500;
@@ -852,7 +852,7 @@ h3 {
   width: 1.8rem;
   height: 1.2rem;
   padding-right: 0.8rem;
-  background: url("./../../assets/icons/arrow_right.svg");
+  background: url("assets/icons/arrow_right.svg");
   background-repeat: no-repeat;
   transition: all 0.25s ease-out;
 }
@@ -1048,7 +1048,7 @@ h3 {
   display: block;
   width: 1.8rem;
   height: 1.2rem;
-  background: url("./../../assets/icons/arrow_right.svg");
+  background: url("assets/icons/arrow_right.svg");
   background-repeat: no-repeat;
   transition: all 0.25s ease-out;
 }

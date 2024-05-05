@@ -126,7 +126,7 @@
       top: -2px;
       width: 1.6rem;
       height: 1.6rem;
-      background: url(./../../assets/icons/checkmark.svg);
+      background: url(assets/icons/checkmark.svg);
       transform: translateY(50%);
     }
 
@@ -138,14 +138,14 @@
       &::before {
         width: 1.8rem;
         height: 1.8rem;
-        background: url(./../../assets/icons/time.svg);
+        background: url(assets/icons/time.svg);
       }
     }
 
     &--price {
       &::before {
         width: 1.8rem;
-        background: url(./../../assets/icons/price.svg);
+        background: url(assets/icons/price.svg);
       }
     }
 
