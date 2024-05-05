@@ -186,7 +186,10 @@
           </div>
           <div class="features__wrapper">
             <section class="feature">
-              <div class="feature__wrapper" data-option="poliranje-enostopenjsko">
+              <div
+                class="feature__wrapper"
+                data-option="poliranje-enostopenjsko"
+              >
                 <img
                   class="feature__icon"
                   src="assets/icons/poliranje-enostopenjsko.svg"
@@ -218,7 +221,10 @@
               </div>
             </section>
             <section class="feature">
-              <div class="feature__wrapper" data-option="poliranje-dvostopenjsko">
+              <div
+                class="feature__wrapper"
+                data-option="poliranje-dvostopenjsko"
+              >
                 <img
                   class="feature__icon"
                   src="assets/icons/poliranje-enostopenjsko.svg"
@@ -298,7 +304,10 @@
               </div>
             </section>
             <section class="feature">
-              <div class="feature__wrapper" data-option="detailing-poliranje-komplet-1">
+              <div
+                class="feature__wrapper"
+                data-option="detailing-poliranje-komplet-1"
+              >
                 <img
                   class="feature__icon"
                   src="assets/icons/komplet-1.svg"
@@ -333,7 +342,10 @@
               </div>
             </section>
             <section class="feature">
-              <div class="feature__wrapper" data-option="detailing-poliranje-komplet-2">
+              <div
+                class="feature__wrapper"
+                data-option="detailing-poliranje-komplet-2"
+              >
                 <img
                   class="feature__icon"
                   src="assets/icons/komplet-2.svg"
@@ -427,54 +439,78 @@
         </div>
 
         <!-- Gallery section -->
-        <section class="gallery">
+        <section
+          class="gallery pswp-gallery pswp-gallery--single-column"
+          id="gallery"
+        >
           <div class="features__header-wrapper">
             <h2 class="features__heading">Galerija slik</h2>
           </div>
           <div class="gallery__thumbnails">
-            <img
-              class="gallery__thumbnail"
-              src="assets/images/placeholder.webp"
-              alt="placeholder"
-            />
-            <img
-              class="gallery__thumbnail"
-              src="assets/images/placeholder.webp"
-              alt="placeholder"
-            />
-            <img
-              class="gallery__thumbnail"
-              src="assets/images/placeholder.webp"
-              alt="placeholder"
-            />
-            <img
-              class="gallery__thumbnail"
-              src="assets/images/placeholder.webp"
-              alt="placeholder"
-            />
-            <img
-              class="gallery__thumbnail"
-              src="assets/images/placeholder.webp"
-              alt="placeholder"
-            />
-            <img
-              class="gallery__thumbnail"
-              src="assets/images/placeholder.webp"
-              alt="placeholder"
-            />
-            <img
-              class="gallery__thumbnail"
-              src="assets/images/placeholder.webp"
-              alt="placeholder"
-            />
-            <img
-              class="gallery__thumbnail"
-              src="assets/images/placeholder.webp"
-              alt="placeholder"
-            />
+            <a
+              href="assets/images/placeholder.webp"
+              data-pswp-width="1669"
+              data-pswp-height="2500"
+              target="_blank"
+            >
+              <img
+                class="gallery__thumbnail"
+                src="assets/images/placeholder.webp"
+                alt="placeholder"
+              />
+            </a>
+            <a>
+              <img
+                class="gallery__thumbnail"
+                src="assets/images/placeholder.webp"
+                alt="placeholder"
+              />
+            </a>
+            <a>
+              <img
+                class="gallery__thumbnail"
+                src="assets/images/placeholder.webp"
+                alt="placeholder"
+              />
+            </a>
+            <a>
+              <img
+                class="gallery__thumbnail"
+                src="assets/images/placeholder.webp"
+                alt="placeholder"
+            /></a>
+            <a>
+              <img
+                class="gallery__thumbnail"
+                src="assets/images/placeholder.webp"
+                alt="placeholder"
+              />
+            </a>
+            <a>
+              <img
+                class="gallery__thumbnail"
+                src="assets/images/placeholder.webp"
+                alt="placeholder"
+              />
+            </a>
+            <a>
+              <img
+                class="gallery__thumbnail"
+                src="assets/images/placeholder.webp"
+                alt="placeholder"
+              />
+            </a>
+            <a>
+              <img
+                class="gallery__thumbnail"
+                src="assets/images/placeholder.webp"
+                alt="placeholder"
+              />
+            </a>
           </div>
         </section>
       </div>
+
       <div class="container-full" id="contact__form">
         <div class="container-wrapper">
           <!-- Contact section -->
@@ -501,7 +537,7 @@
                 </div>
               </div>
               <div class="contact__right">
-                <form class="contact__form">
+                <form class="contact__form" action="https://formspree.io/f/xoqgyypb" method="POST">
                   <div class="contact__form__element">
                     <label for="name">Ime</label>
                     <input type="text" id="name" name="name" required />
@@ -517,7 +553,7 @@
                   <div class="contact__form__element">
                     <label for="plans">Izbrani paket</label>
                     <div class="contact__select-wrapper">
-                      <select id="plans" name="plans">
+                      <select id="plans" name="paket">
                         <option value="" disabled selected>
                           Izberite paket...
                         </option>

@@ -12,5 +12,8 @@
     "sass": "^1.75.0",
     "sass-loader": "^14.2.1",
     "webpack": "^5.91.0"
+  },
+  "dependencies": {
+    "photoswipe": "^5.4.3"
   }
 }
