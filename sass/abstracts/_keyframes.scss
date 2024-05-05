@@ -1,0 +1,7 @@
+@use "./variables" as *;
+
+@keyframes selectFlash {
+  0% { background-color: transparent; }
+  50% { background-color: #f796344f; }
+  100% { background-color: transparent; }
+}

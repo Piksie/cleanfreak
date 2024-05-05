@@ -9,20 +9,24 @@ $breakpoints: (
 // Color variables
 $primary-100: #7C939A;
 $primary-200: #4D6D76;
+$primary-400: #183F4A;
 $primary-600: #163A44;
 $primary-700: #12252A;
 $primary-800: #05171C;
 $primary-900: #000F13;
+$secondary-50: #f7963473;
 $secondary-100: #F79734;
 $accent-100: #3C7B8E;
 $accent-100-hov: #45869A;
 $accent-200: #397182;
 $white: #FFFFFF;
 $darkgray: #3B4B50;
+$lightgray: #A0A7A9;
 
 // Gradients
 $gradient-default: linear-gradient(0deg, rgba(0, 15, 19, 0) 0%, #000f13b4 70%);
 $gradient-dark: radial-gradient(50% 50% at 50% 50%, #061A1F 0%, #04161A 100%);
 
 // Border radii
-$radii: 0.6rem
+$radii-md: 0.6rem;
+$radii-sm: 0.4rem;

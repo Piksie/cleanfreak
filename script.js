@@ -1,7 +1,8 @@
-console.log("ola");
-
 const navMenuToggle = document.getElementById("nav__menu-toggle");
 const navMenu = document.querySelector(".nav");
+const featureCardCTAs = document.querySelectorAll(".feature__cta");
+const contactForm = document.getElementById("contact__form");
+const formFeatureSelect = document.getElementById("plans");
 
 navMenuToggle.addEventListener("click", () => {
   if (navMenuToggle.classList.contains("active")) {
@@ -19,4 +20,20 @@ window.addEventListener("scroll", () => {
   } else {
     navMenu.classList.remove("scrolled");
   }
+});
+
+featureCardCTAs.forEach((cta) => {
+  cta.addEventListener("click", (event) => {
+    event.preventDefault();
+    const navHeight = navMenu.clientHeight;
+    const selectedOption = cta.parentElement.dataset.option;
+    formFeatureSelect.value = selectedOption;
+    const scrollPosition = contactForm.offsetTop - navHeight;
+    window.scrollTo({ top: scrollPosition, behavior: "smooth" });
+    formFeatureSelect.focus({ preventScroll: true });
+    formFeatureSelect.classList.add('focused')
+    setTimeout(() => {
+        formFeatureSelect.classList.remove('focused')
+    }, 3000);
+  });
 });
