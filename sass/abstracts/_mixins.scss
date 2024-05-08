@@ -62,21 +62,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.6rem;
-  padding: 1.2rem 2.4rem;
+  gap: 1.2rem;
+  padding: 1.2rem 2rem;
   border-radius: 6px;
   border: 1px solid $white;
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   line-height: 2.4rem;
   color: $white;
   background-color: rgb(255, 255, 255, 0.02);
-  box-shadow: 1px 1px 9px rgba(255, 255, 255, 0.05);
+  box-shadow: 1px 1px 9px rgba(255, 255, 255, 0);
   transition: all 0.25s ease-out;
 
-  @include respond-to("desktop") {
-    padding: 1.8rem 3.4rem;
+  @include respond-to("desktop-sm") {
+    padding: 1.8rem 2.4rem;
+    gap: 1.6rem;
     font-size: 2rem;
   }
 
@@ -91,10 +92,12 @@
   }
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 1px 1px 9px rgba(255, 255, 255, 0.05);
+    transform: translateY(1px);
     transition: all 0.25s ease-in;
     .cta-btn__arrow {
-      transform: translateX(4px);
+      transform: translateX(2px);
       transition: all 0.25s ease-in;
     }
   }

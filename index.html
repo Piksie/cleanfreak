@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cleanfreak</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preload" href="assets/images/hero-img--lg.webp" as="image" />
   </head>
   <body>
     <main>
@@ -447,64 +448,87 @@
             <h2 class="features__heading">Galerija slik</h2>
           </div>
           <div class="gallery__thumbnails">
-            <a
-              href="assets/images/placeholder.webp"
-              data-pswp-width="1669"
-              data-pswp-height="2500"
-              target="_blank"
-            >
+            <a data-fslightbox="gallery" href="assets/images/cf__ba__1.webp">
               <img
                 class="gallery__thumbnail"
-                src="assets/images/placeholder.webp"
+                src="assets/images/cf__ba__1--thumb.webp"
+                alt="Before and after picture of Cleanfreak services"
+              />
+            </a>
+            <a data-fslightbox="gallery" href="assets/images/cf__ba__2.webp">
+              <img
+                class="gallery__thumbnail"
+                src="assets/images/cf__ba__2--thumb.webp"
+                alt="Before and after picture of Cleanfreak services"
+              />
+            </a>
+            <a data-fslightbox="gallery" href="assets/images/cf__ba__3.webp">
+              <img
+                class="gallery__thumbnail"
+                src="assets/images/cf__ba__3--thumb.webp"
+                alt="Before and after picture of Cleanfreak services"
+              />
+            </a>
+            <a data-fslightbox="gallery" href="assets/images/cf__ba__4.webp">
+              <img
+                class="gallery__thumbnail"
+                src="assets/images/cf__ba__4--thumb.webp"
+                alt="Before and after picture of Cleanfreak services"
+              />
+            </a>
+            <a data-fslightbox="gallery" href="assets/images/cf__ba__5.webp">
+              <img
+                class="gallery__thumbnail"
+                src="assets/images/cf__ba__5--thumb.webp"
                 alt="placeholder"
               />
             </a>
-            <a>
+            <a data-fslightbox="gallery" href="assets/images/cf__ba__6.webp">
               <img
                 class="gallery__thumbnail"
-                src="assets/images/placeholder.webp"
-                alt="placeholder"
-              />
-            </a>
-            <a>
-              <img
-                class="gallery__thumbnail"
-                src="assets/images/placeholder.webp"
-                alt="placeholder"
-              />
-            </a>
-            <a>
-              <img
-                class="gallery__thumbnail"
-                src="assets/images/placeholder.webp"
-                alt="placeholder"
+                src="assets/images/cf__ba__6--thumb.webp"
+                alt="Before and after picture of Cleanfreak services"
             /></a>
-            <a>
+            <a data-fslightbox="gallery" href="assets/images/cf__ba__7.webp">
               <img
                 class="gallery__thumbnail"
-                src="assets/images/placeholder.webp"
-                alt="placeholder"
+                src="assets/images/cf__ba__7--thumb.webp"
+                alt="Before and after picture of Cleanfreak services"
               />
             </a>
-            <a>
+            <a data-fslightbox="gallery" href="assets/images/cf__ba__8.webp">
               <img
                 class="gallery__thumbnail"
-                src="assets/images/placeholder.webp"
-                alt="placeholder"
+                src="assets/images/cf__ba__8--thumb.webp"
+                alt="Before and after picture of Cleanfreak services"
               />
             </a>
-            <a>
+            <a data-fslightbox="gallery" href="assets/images/cf__ba__9.webp">
               <img
                 class="gallery__thumbnail"
-                src="assets/images/placeholder.webp"
-                alt="placeholder"
+                src="assets/images/cf__ba__9--thumb.webp"
+                alt="Before and after picture of Cleanfreak services"
               />
             </a>
-            <a>
+            <a data-fslightbox="gallery" href="assets/images/cf__ba__10.webp">
               <img
                 class="gallery__thumbnail"
-                src="assets/images/placeholder.webp"
-                alt="placeholder"
+                src="assets/images/cf__ba__10--thumb.webp"
+                alt="Before and after picture of Cleanfreak services"
+              />
+            </a>
+            <a data-fslightbox="gallery" href="assets/images/cf__ba__11.webp">
+              <img
+                class="gallery__thumbnail"
+                src="assets/images/cf__ba__11--thumb.webp"
+                alt="Before and after picture of Cleanfreak services"
+              />
+            </a>
+            <a data-fslightbox="gallery" href="assets/images/cf__ba__12.webp">
+              <img
+                class="gallery__thumbnail"
+                src="assets/images/cf__ba__12--thumb.webp"
+                alt="Before and after picture of Cleanfreak services"
               />
             </a>
           </div>
@@ -537,7 +561,11 @@
                 </div>
               </div>
               <div class="contact__right">
-                <form class="contact__form" action="https://formspree.io/f/xoqgyypb" method="POST">
+                <form
+                  class="contact__form"
+                  action="https://formspree.io/f/xoqgyypb"
+                  method="POST"
+                >
                   <div class="contact__form__element">
                     <label for="name">Ime</label>
                     <input type="text" id="name" name="name" required />
@@ -621,6 +649,7 @@
       </footer>
     </main>
 
+    <script src="fslightbox.js"></script>
     <script src="script.js" async defer></script>
   </body>
 </html>

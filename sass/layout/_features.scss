@@ -58,7 +58,7 @@
   justify-content: space-between;
   flex: 1 0 280px;
   width: 100%;
-  padding: 2.6rem;
+  padding: 2.4rem;
   border-radius: 6px;
   background-color: $primary-700;
 
@@ -83,11 +83,20 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    gap: 2.4rem;
   }
 
   &__items {
-    padding: 2.4rem 0 2.4rem 0;
+    padding: 2.6rem 0 2.6rem 0;
+    &:first-child {
+      @include respond-to("tablet") {
+        padding: 2.8rem 0 3.2rem 0;
+      }
+    }
+    &:last-child {
+      @include respond-to("tablet") {
+        padding: 3.2rem 0 3.2rem 0;
+      }
+    }
   }
 
   &__items:not(:first-child) {
@@ -95,12 +104,12 @@
   }
 
   &__icon {
-    width: 8rem;
+    width: 6.4rem;
     height: auto;
     margin-bottom: 2.4rem;
 
     @include respond-to("tablet") {
-      width: 9.6rem;
+      width: 8.8rem;
     }
   }
 
@@ -109,13 +118,15 @@
     margin-bottom: 1rem;
     padding-left: 3.2rem;
     font-family: "Inter", sans-serif;
-    font-size: 1.9rem;
-    line-height: 2.8rem;
+    font-size: 1.8rem;
+    line-height: 2.6rem;
     font-weight: 300;
     color: $white;
 
-    @include respond-to("desktop") {
+    @include respond-to("desktop-sm") {
+      margin-bottom: 1.4rem;
       font-size: 2rem;
+      line-height: 3.2rem;
     }
 
     &::before {
@@ -123,15 +134,19 @@
       display: block;
       position: absolute;
       left: 0;
-      top: -2px;
+      top: -3px;
       width: 1.6rem;
       height: 1.6rem;
       background: url(assets/icons/checkmark.svg);
       transform: translateY(50%);
+
+      @include respond-to("desktop-sm") {
+        top: -1px;
+      }
     }
 
     &:last-child {
-      margin-bottom: none;
+      margin-bottom: 0;
     }
 
     &--time {
@@ -144,7 +159,6 @@
 
     &--price {
       &::before {
-        width: 1.8rem;
         background: url(assets/icons/price.svg);
       }
     }
@@ -156,7 +170,12 @@
 
   &__cta {
     @include btn-secondary(true);
-    padding: 1.4rem 2.4rem;
+    padding: 1.4rem 2rem;
+    max-width: 27.6rem;
+
+    @include respond-to("desktop-sm") {
+      max-width: none;
+    }
   }
 
   &--highlighted {
