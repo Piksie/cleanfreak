@@ -7,7 +7,7 @@
   justify-content: space-between;
   position: fixed;
   width: 100%;
-  padding: 1.2rem 2rem 1.2rem 2rem;
+  padding: 1.8rem 2rem 1.8rem 2rem;
   background: $gradient-default;
   background-color: none;
   z-index: 1;
@@ -20,6 +20,7 @@
   @include respond-to("desktop-sm") {
     flex-direction: row;
     justify-content: center;
+    padding: 2rem 4rem 2rem 4rem;
   }
 
   &__mobile-container {
@@ -47,7 +48,7 @@
   }
 
   &__logo img {
-    height: 4.8rem;
+    height: 4.4rem;
     width: auto;
     transition: all 0.15s ease-out;
 
@@ -166,7 +167,7 @@
   transition: all 0.25s ease-in;
 
   @include respond-to("desktop-sm") {
-    padding: 1.9rem 3.2rem 1.9rem 3.2rem;
+    padding: 1.9rem 4rem 1.9rem 4rem;
   }
 
   .logo {

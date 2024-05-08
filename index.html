@@ -139,11 +139,11 @@
                     </li>
                   </ul>
                 </div>
+                <a href="#" class="feature__cta"
+                  >Naročite se na termin
+                  <span class="feature__cta__arrow cta-btn__arrow"></span
+                ></a>
               </div>
-              <a href="#" class="feature__cta"
-                >Naročite se na termin
-                <span class="feature__cta__arrow cta-btn__arrow"></span
-              ></a>
             </section>
             <section class="feature feature--highlighted">
               <div class="feature__wrapper" data-option="detailing-komplet">
@@ -171,11 +171,11 @@
                     </li>
                   </ul>
                 </div>
+                <a href="#" class="feature__cta"
+                  >Naročite se na termin
+                  <span class="feature__cta__arrow cta-btn__arrow"></span
+                ></a>
               </div>
-              <a href="#" class="feature__cta"
-                >Naročite se na termin
-                <span class="feature__cta__arrow cta-btn__arrow"></span
-              ></a>
             </section>
           </div>
         </section>
@@ -228,7 +228,7 @@
               >
                 <img
                   class="feature__icon"
-                  src="assets/icons/poliranje-enostopenjsko.svg"
+                  src="assets/icons/poliranje-dvostopenjsko.svg"
                   aria-hidden="true"
                 />
                 <h3 class="feature__title">Dvostopenjsko poliranje</h3>
@@ -434,7 +434,7 @@
           </div>
         </section>
 
-        <div class="price-disclaimer">
+        <div class="price-disclaimer body4">
           * DDV ni obračunan na podlagi 1. odstavka 94. člena zakona o davku na
           dodano vrednost.
         </div>
@@ -550,14 +550,17 @@
                   elektronske pošte:
                 </p>
                 <div class="contact__info">
-                  <div class="contact__info-item">
+                  <a href="tel:+38640328421" class="contact__info-item">
                     <img src="assets/icons/phone.svg" alt="Our phone number" />
-                    <a href="tel:+38640328421">040 328 421</a>
-                  </div>
-                  <div class="contact__info-item">
+                    040 328 421
+                  </a>
+                  <a
+                    href="mailto:info@cleanfreak.si"
+                    class="contact__info-item"
+                  >
                     <img src="assets/icons/email.svg" alt="Our email address" />
-                    <a href="mailto:info@cleanfreak.si">info@cleanfreak.si</a>
-                  </div>
+                    info@cleanfreak.si
+                  </a>
                 </div>
               </div>
               <div class="contact__right">
@@ -581,7 +584,7 @@
                   <div class="contact__form__element">
                     <label for="plans">Izbrani paket</label>
                     <div class="contact__select-wrapper">
-                      <select id="plans" name="paket">
+                      <select id="plans" name="paket" required>
                         <option value="" disabled selected>
                           Izberite paket...
                         </option>

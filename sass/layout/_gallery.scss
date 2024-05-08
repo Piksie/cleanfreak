@@ -24,22 +24,34 @@
 
   &__thumbnails {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1.6rem;
 
     @include respond-to("tablet") {
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 3.2rem;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 2.4rem;
     }
 
     @include respond-to("desktop-sm") {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(6, 1fr);
+      grid-gap: 3.2rem;
     }
   }
 
   &__thumbnail {
     width: 100%;
     height: auto;
-    border-radius: $radii-md;
+    border-radius: $radii-sm;
+
+    @include respond-to("tablet") {
+      border-radius: $radii-md;
+    }
   }
+}
+
+// Lightbox overrides
+.fslightbox-container {
+  background: none !important;
+  background-color: #000f13cc !important;
+  backdrop-filter: blur(3px) !important;
 }
