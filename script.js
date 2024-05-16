@@ -31,10 +31,19 @@ featureCardCTAs.forEach((cta) => {
     const scrollPosition = contactForm.offsetTop - navHeight;
     window.scrollTo({ top: scrollPosition, behavior: "smooth" });
     formFeatureSelect.focus({ preventScroll: true });
-    formFeatureSelect.classList.add('focused')
+    formFeatureSelect.classList.add("focused");
     setTimeout(() => {
-        formFeatureSelect.classList.remove('focused')
+      formFeatureSelect.classList.remove("focused");
     }, 3000);
   });
 });
 
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const navHeight = navMenu.clientHeight;
+    const selectedElement = document.getElementById((this.getAttribute("href")).substring(1));
+    const scrollPosition = selectedElement.offsetTop - navHeight;
+    window.scrollTo({ top: scrollPosition, behavior: "smooth" });
+  });
+});

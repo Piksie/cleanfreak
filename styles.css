@@ -268,7 +268,7 @@ h3 {
 
 .body3 {
   font-family: "DM Sans", sans-serif;
-  font-size: 2rem;
+  font-size: 1.6rem;
   line-height: 2.8rem;
   font-weight: 300;
   color: #FFFFFF;
@@ -411,7 +411,11 @@ h3 {
   line-height: 2.6rem;
   font-weight: 400;
   color: #FFFFFF;
-  transition: font-size 0.25s ease-out;
+  transition: all 0.25s ease-in;
+}
+.nav__links li:not(:last-child) a:hover {
+  color: #9BBDC7;
+  transition: all 0.25s ease-out;
 }
 .nav__links .nav__link--cta {
   display: flex;
@@ -1091,6 +1095,7 @@ h3 {
   color: #FFFFFF;
   background-color: #3C7B8E;
   transition: all 0.25s ease-out;
+  cursor: pointer;
   max-width: 21rem;
 }
 @media (min-width: 768px) {
@@ -1130,6 +1135,36 @@ h3 {
   .contact__form #contact__form-submit {
     max-width: 27rem;
   }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  padding: 1.6rem 0 1.6rem 0;
+  width: 100%;
+  background-color: #000F13;
+}
+@media (min-width: 996px) {
+  .footer {
+    padding: 2.4rem 0 2.4rem 0;
+  }
+}
+.footer__container {
+  flex-direction: row !important;
+  align-items: flex-start !important;
+}
+.footer__info {
+  width: 100%;
+  max-width: 132rem;
+}
+.footer__info p {
+  line-height: 2.4rem;
+  color: #7C939A;
+}
+.footer__info p:first-child {
+  font-weight: 600;
+  color: #FFFFFF;
 }
 
 .gallery {

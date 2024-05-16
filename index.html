@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cleanfreak</title>
+    <meta
+      name="description"
+      content="Profesionalne avtokozmetične storitve za vaše vozilo. CleanFreak je specialisti za detajlno poliranje, čiščenje in zaščito vašega osebngea vozila."
+    />
+    <title>Cleanfreak - Profesionalne avtokozmetične storitve</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="preload" href="assets/images/hero-img--lg.webp" as="image" />
   </head>
@@ -25,13 +30,13 @@
           </div>
           <ul class="nav__links" id="nav__links">
             <li class="nav__item">
-              <a href="#" class="nav__link">Galerija slik</a>
+              <a href="#gallery" class="nav__link">Galerija slik</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">Kontakt</a>
+              <a href="#contact" class="nav__link">Kontakt</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link nav__link--cta"
+              <a href="#contact" class="nav__link nav__link--cta"
                 >Zagotovite si termin<span
                   class="nav__link--cta__arrow cta-btn__arrow"
                 ></span
@@ -53,7 +58,7 @@
               zaščito vašega vozila.
             </p>
           </div>
-          <a href="#" class="hero__cta-btn"
+          <a href="#contact" class="hero__cta-btn"
             >Zagotovite si termin
             <span class="hero__cta-btn__arrow cta-btn__arrow"></span
           ></a>
@@ -294,7 +299,7 @@
                       Trajanje: <span>9 ur</span>
                     </li>
                     <li class="feature__item feature__item--price">
-                      Cena: <span>220€*</span>
+                      Cena: <span>od 220€*</span>
                     </li>
                   </ul>
                 </div>
@@ -538,7 +543,7 @@
       <div class="container-full" id="contact__form">
         <div class="container-wrapper">
           <!-- Contact section -->
-          <section class="contact">
+          <section class="contact" id="contact">
             <div class="features__header-wrapper">
               <h2 class="features__heading">Naročite se na svoj termin</h2>
             </div>
@@ -639,15 +644,12 @@
 
       <!-- Footer -->
       <footer class="footer">
-        <div class="footer__logo">
-          <img
-            src="assets/logo.svg"
-            alt="Cleanfreak logo"
-            class="logo logo-footer"
-          />
-        </div>
-        <div class="footer__copyright">
-          &copy; 2024 Cleanfreak - Matevž Cvajnar S.P.
+        <div class="container-wrapper footer__container">
+          <div class="footer__info body3">
+            <p>&copy; Cleanfreak - Matevž Cvajnar S.P.</p>
+            <p>Dimčeva ulica 3</p>
+            <p>1215 Medvode</p>
+          </div>
         </div>
       </footer>
     </main>

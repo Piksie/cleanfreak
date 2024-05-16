@@ -158,6 +158,7 @@
 
     #contact__form-submit {
       @include btn-primary;
+      cursor: pointer;
       max-width: 21rem;
 
       @include respond-to("tablet") {
