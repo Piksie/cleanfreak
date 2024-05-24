@@ -776,6 +776,9 @@ h3 {
   justify-content: space-between;
   height: 100%;
 }
+.feature__items-wrapper--no-features {
+  justify-content: flex-end;
+}
 .feature__items {
   padding: 2.6rem 0 2.6rem 0;
 }

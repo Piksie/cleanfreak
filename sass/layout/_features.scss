@@ -85,6 +85,10 @@
     height: 100%;
   }
 
+  &__items-wrapper--no-features {
+    justify-content: flex-end;
+  }
+  
   &__items {
     padding: 2.6rem 0 2.6rem 0;
     &:first-child {
